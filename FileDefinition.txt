@@ -1,0 +1,5 @@
+*.cmd
+*.txt
+.git*
+images
+sourceModels
