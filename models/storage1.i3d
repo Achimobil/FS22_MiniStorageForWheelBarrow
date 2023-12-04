@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="storage1" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="i3dConverter" version="1.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="10" filename="C:/Program Files (x86)/Farming Simulator 2022/data/shaders/buildingShader.xml"/>
+    <File fileId="3" filename="C:/Program Files (x86)/Farming Simulator 2022/data/shaders/vehicleShader.xml"/>
+    <File fileId="7" filename="../textures/PaintedMetal007_2K_Color.dds"/>
+    <File fileId="8" filename="../textures/PaintedMetal007_2K_NormalDX.dds"/>
+    <File fileId="9" filename="../textures/PaintedMetal007_2K_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="border_mat" materialId="1" diffuseColor="0.0431373 0.0431373 0.0431373 1" specularColor="0.498039 1 0" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat0" value="0.5 0.5 0.5 1"/>
+    </Material>
+    <Material name="mainstorage_cube" materialId="2" customShaderId="10" customShaderVariation="colorScale">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="storage1.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="miniStorage" nodeId="7">
+        <Shape shapeId="1" name="MainStorageBorder" translation="0 1.5 0" scale="0.5 1.5 1" nodeId="8" materialIds="1" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="2" name="MainStorageCube" translation="0 1.5 0" scale="0.5 1.5 1" nodeId="9" materialIds="2" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="tube" translation="0.5 1 0" rotation="0 -0 -90" scale="0.1 1 0.1" nodeId="10" materialIds="1" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+  </Scene>
+
+</i3D>
