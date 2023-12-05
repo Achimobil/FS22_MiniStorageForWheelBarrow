@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="silo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+	<storeData>
+		<name>Mini Storage For Wheel Barrow</name>
+		<functions>
+			<function>$l10n_function_farmSilo</function>
+		</functions>
+		<image>uniaMiniStorage.png</image>
+		<price>6000</price>
+		<dailyUpkeep>20</dailyUpkeep>
+		<lifetime>1000</lifetime>
+		<rotation>0</rotation>
+		<brand>UNIA</brand>
+		<species>placeable</species>
+		<category>silos</category>
+		<brush>
+			<type>placeable</type>
+			<category>buildings</category>
+			<tab>silos</tab>
+		</brush>
+	</storeData>
+	<base>
+		<filename>models/uniaMiniStorage.i3d</filename>
+		<canBeRenamed>true</canBeRenamed>
+	</base>
+	<placement useRandomYRotation="false" useManualYRotation="true">
+		<testAreas>
+			<testArea startNode="testArea1Start" endNode="testArea1End"/>
+		</testAreas>
+		<sounds>
+			<place template="siloImp"/>
+		</sounds>
+	</placement>
+	<clearAreas>
+		<clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+	</clearAreas>
+	<leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+		<levelAreas>
+			<levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+		</levelAreas>
+	</leveling>
+	<indoorAreas/>
+	<tipOcclusionUpdateAreas>
+		<tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End"/>
+	</tipOcclusionUpdateAreas>
+	<ai>
+		<updateAreas>
+			<updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End"/>
+		</updateAreas>
+	</ai>
+	<infoTrigger triggerNode="infoTrigger"/>
+	<silo>
+		<loadingStation node="loadingTriggerPipe" supportsExtension="false" storageRadius="1">
+			<loadTrigger triggerNode="loadingTriggerPipe" fillLitersPerSecond="100" dischargeNode="dischargeNodePipe" fillTypeCategories="shovel" fillSoundIdentifier="fillSound02" fillSoundNode="fillSoundNodePipe" autoStart="true">
+				<effectNode effectClass="PipeEffect" effectNode="pipeEffectPipe" materialType="pipe" fadeTime="0.5" maxBending="0" controlPoint="4.8 0 0 0"/>
+				<effectNode effectNode="pipeEffectSmokePipe" materialType="unloadingSmoke" fadeTime="0.5"/>
+			</loadTrigger>
+		</loadingStation>
+		<unloadingStation supportsExtension="false" storageRadius="1">
+			<unloadTrigger exactFillRootNode="exactFillRootNode" fillTypeCategories="shovel"/>
+			<effectNodes>
+				<effectNode effectNode="unloadEffect1" materialType="unloading"/>
+				<effectNode effectNode="unloadEffect2" materialType="unloading"/>
+				<effectNode effectNode="unloadEffectPlane" delay="0" fadeTime="0.1" uvSpeed="0.1"/>
+				<effectNode effectNode="unloadEffectSmoke" materialType="unloadingSmoke"/>
+			</effectNodes>
+			<animationNodes>
+				<animationNode class="RotationAnimation" node="augerDrum" rotSpeed="400" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1"/>
+			</animationNodes>
+			<sounds>
+				<active file="$data/sounds/placeables/hayLoftWork.wav" linkNode="augerSoundNode" innerRadius="8.00" outerRadius="60.00" fadeIn="1" fadeOut="1" volumeScale="2" loops="0">
+					<volume indoor="0.8" outdoor="1.0"/>
+					<pitch indoor="1" outdoor="1"/>
+					<lowpassGain indoor="0.5" outdoor="1"/>
+				</active>
+			</sounds>
+		</unloadingStation>
+		<storages>
+			<storage node="storage" fillTypeCategories="shovel" capacity="8000" isExtension="false" supportsMultipleFillTypes="false"/>
+		</storages>
+	</silo>
+	<hotspots>
+	<hotspot type="UNLOADING" linkNode="mapPosition" teleportNode="teleportNode"/>
+	</hotspots>
+	<triggerMarkers>
+		<triggerMarker node="markerLoadingPipe" filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD"/>
+		<triggerMarker node="markerUnloading" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD"/>
+	</triggerMarkers>
+	<i3dMappings>
+		<i3dMapping id="loadingTriggerPipe" node="0>0|0|0|0"/>
+		<i3dMapping id="dischargeNodePipe" node="0>0|0|0|1"/>
+		<i3dMapping id="fillSoundNodePipe" node="0>0|0|0|2"/>
+		<i3dMapping id="markerLoadingPipe" node="0>0|0|0|3"/>
+		<i3dMapping id="exactFillRootNode" node="0>0|1|0|0"/>
+		<i3dMapping id="unloadEffect1" node="0>0|1|0|1"/>
+		<i3dMapping id="unloadEffect2" node="0>0|1|0|2"/>
+		<i3dMapping id="unloadEffectPlane" node="0>0|1|0|3"/>
+		<i3dMapping id="unloadEffectSmoke" node="0>0|1|0|4"/>
+		<i3dMapping id="augerSoundNode" node="0>0|1|1" />
+		<i3dMapping id="markerUnloading" node="0>0|1|2" />
+		<i3dMapping id="infoTrigger" node="0>0|2" />
+		<i3dMapping id="storage" node="0>1"/>
+		<i3dMapping id="augerDrum" node="0>2|1|1"/>
+		<i3dMapping id="pipeEffectPipe" node="0>2|2|2|0"/>
+		<i3dMapping id="pipeEffectSmokePipe" node="0>2|2|2|1"/>
+		<i3dMapping id="clearArea1Start" node="0>3|0|0"/>
+		<i3dMapping id="clearArea1Width" node="0>3|0|0|0"/>
+		<i3dMapping id="clearArea1Height" node="0>3|0|0|1"/>
+		<i3dMapping id="levelArea1Start" node="0>3|1|0"/>
+		<i3dMapping id="levelArea1Width" node="0>3|1|0|0"/>
+		<i3dMapping id="levelArea1Height" node="0>3|1|0|1"/>
+		<i3dMapping id="tipOcclusionUpdateArea1Start" node="0>3|2|0"/>
+		<i3dMapping id="tipOcclusionUpdateArea1End" node="0>3|2|0|0"/>
+		<i3dMapping id="testArea1Start" node="0>3|3|0"/>
+		<i3dMapping id="testArea1End" node="0>3|3|0|0"/>
+		<i3dMapping id="mapPosition" node="0>3|4"/>
+		<i3dMapping id="teleportNode" node="0>3|5"/>
+		<!-- <i3dMapping id="storage" node="0>0|1"/> -->
+		<!-- <i3dMapping id="dischargeNode" node="0>0|2|0|1"/> -->
+		<!-- <i3dMapping id="dischargeEffect" node="0>0|2|0|2"/> -->
+		<!-- <i3dMapping id="pipeEffect" node="0>0|2|0|2|0"/> -->
+		<!-- <i3dMapping id="pipeEffectSmoke" node="0>0|2|0|2|1"/> -->
+		<!-- <i3dMapping id="aiLoadingNode" node="0>0|2|0|3"/> -->
+		<!-- <i3dMapping id="markerLoading" node="0>0|2|1"/> -->
+		<!-- <i3dMapping id="exactFillRootNode" node="0>0|3|0"/> -->
+		<!-- <i3dMapping id="grainGutterLinkNode" node="0>0|3|1"/> -->
+		<!-- <i3dMapping id="aiUnloadingNode" node="0>0|3|2"/> -->
+		<!-- <i3dMapping id="markerUnloading" node="0>0|3|3"/> -->
+		<!-- <i3dMapping id="infoTrigger" node="0>0|4"/> -->
+		<!-- <i3dMapping id="aiSpline" node="0>0|5"/> -->
+		<!-- <i3dMapping id="clearArea1Start" node="0>3|0|0"/> -->
+		<!-- <i3dMapping id="clearArea1Width" node="0>3|0|0|0"/> -->
+		<!-- <i3dMapping id="clearArea1Height" node="0>3|0|0|1"/> -->
+		<!-- <i3dMapping id="levelArea1Start" node="0>3|1|0"/> -->
+		<!-- <i3dMapping id="levelArea1Width" node="0>3|1|0|0"/> -->
+		<!-- <i3dMapping id="levelArea1Height" node="0>3|1|0|1"/> -->
+		<!-- <i3dMapping id="clearArea2Start" node="0>1|1"/> -->
+		<!-- <i3dMapping id="clearArea2Width" node="0>1|1|0"/> -->
+		<!-- <i3dMapping id="clearArea2Height" node="0>1|1|1"/> -->
+		<!-- <i3dMapping id="levelArea1Start" node="0>2|0"/> -->
+		<!-- <i3dMapping id="levelArea1Width" node="0>2|0|0"/> -->
+		<!-- <i3dMapping id="levelArea1Height" node="0>2|0|1"/> -->
+		<!-- <i3dMapping id="levelArea2Start" node="0>2|1"/> -->
+		<!-- <i3dMapping id="levelArea2Width" node="0>2|1|0"/> -->
+		<!-- <i3dMapping id="levelArea2Height" node="0>2|1|1"/> -->
+		<!-- <i3dMapping id="testArea1Start" node="0>3|0"/> -->
+		<!-- <i3dMapping id="testArea1End" node="0>3|0|0"/> -->
+		<!-- <i3dMapping id="testArea2Start" node="0>3|1"/> -->
+		<!-- <i3dMapping id="testArea2End" node="0>3|1|0"/> -->
+		<!-- <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>4|0"/> -->
+		<!-- <i3dMapping id="tipOcclusionUpdateArea1End" node="0>4|0|0"/> -->
+		<!-- <i3dMapping id="teleportNode" node="0>8"/> -->
+	</i3dMappings>
+</placeable>

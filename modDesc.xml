@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="79">
+    <author>Achimobil</author>
+    <version>0.1.0.0</version>
+    
+    <title>
+        <en>Mini Storage For Wheel Barrow</en>
+    </title>
+    
+    <description>
+        <en>
+            <![CDATA[Mini Store
+]]></en>
+    </description>
+    
+    <multiplayer supported="true"/>
+    
+    <iconFilename>icon_MiniStorageForWheelBarrow.dds</iconFilename>
+    
+    <storeItems>
+        <storeItem xmlFilename="uniaMiniStorage.xml"/>
+    </storeItems>
+    <extraSourceFiles>
+        <sourceFile filename="scripts/showOnlyInSilo.lua"/>
+    </extraSourceFiles>
+    
+    
+    <!-- <l10n> -->
+        <!-- <text name="function_palletStorage"> -->
+            <!-- <en>Storage for pallets and bales</en> -->
+            <!-- <de>Lager für Paletten und Ballen. Die Angegebene Kapazität ist pro Filltype.</de> -->
+            <!-- <it>Magazzino per pallet e balle</it> -->
+            <!-- <ru>Хранилище поддонов и тюков. Вместимость указана для каждого типа материалов.</ru> -->
+        <!-- </text> -->
+        <!-- <text name="smallPalletStorage"> -->
+            <!-- <en>Underground Storage</en> -->
+            <!-- <de>Unterirdisches Lager</de> -->
+            <!-- <it>Stoccaggio sotterraneo</it> -->
+            <!-- <ru>Подземное хранилище</ru> -->
+        <!-- </text> -->
+		<!-- <text name="fillType_FRENCHFRIES" > -->
+			<!-- <en>French Fries</en>  -->
+			<!-- <de>Pommes</de>  -->
+			<!-- <it>Pommes</it> -->
+            <!-- <ru>Картофель фри</ru> -->
+		<!-- </text> -->
+    <!-- </l10n> -->
+</modDesc>
