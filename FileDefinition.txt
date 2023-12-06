@@ -3,3 +3,4 @@
 .git*
 images
 sourceModels
+*.md

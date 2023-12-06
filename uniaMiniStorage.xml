@@ -5,7 +5,7 @@
 		<functions>
 			<function>$l10n_function_farmSilo</function>
 		</functions>
-		<image>uniaMiniStorage.png</image>
+		<image>store_uniaMiniStorage.png</image>
 		<price>6000</price>
 		<dailyUpkeep>20</dailyUpkeep>
 		<lifetime>1000</lifetime>
