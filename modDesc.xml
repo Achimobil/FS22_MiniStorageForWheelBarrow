@@ -1,15 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="79">
     <author>Achimobil</author>
-    <version>0.1.0.2</version>
+    <version>0.1.0.3</version>
     
     <title>
+        <de>Mini Silo Für Schubkarren</de>
         <en>Mini Storage For Wheel Barrow</en>
     </title>
     
     <description>
         <en>
-            <![CDATA[Mini Store
+            <![CDATA[Ein kleines Silo dessen Sinn darin liegt, dass man sich kleine Mengen einlagert und diese dann mit einer Schubkarre zu den Tierställen bringt.
+
+Kleine Tierställe brauchen meist nur kleine Mengen an Futter. Hierfür ein riesiges Multifrucht Silo hin zu stellen wäre nicht nur Platz und Geldverschwendung, sondern klappt auch meistens nicht.
+Entweder fungieren diese Silos dann auf komische weise mit den Ställen oder der Platz reicht einfach nicht. Dieses Mini-Silo ist genau für diese Zwecke gedacht.
+Es ist nicht erweiterungsfähig und hat somit keine Wechselwirkung mit anderen Gebäuden in der Nähe. 
+Es kann mit einem normalen Kipper befüllt werden und die Entnahme erfolgt über das Ausgabe Rohr mit einer Schubkarre, einem Eimer oder einem niedrigen kleinen Anhänger.
+
+Eingelagert werden kann alles, was in eine Schaufel geht. Es ist nicht Multifrucht und somit geht nur ein Filltype rein.
+Durch eine Skript Erweiterung wird der Inhalt trotzdem ohne zusätzliches Popupmenü ausgegeben, wenn man die Beladentaste des Fahrzeugs nutzt.
+
+Technische Daten
+- Benötigte Fläche: 5x5m
+- Preis: 6000€
+- Fassungsvermögen: 8m²
+- Unterhaltskosten: 20€
+
+
+]]></en>
+        <en>
+            <![CDATA[A small silo whose purpose is to store small quantities and then transport them to the animal sheds with a wheelbarrow.
+
+Small animal sheds usually only need small amounts of feed. Putting up a huge multi-fruit silo for this would not only be a waste of space and money, but also usually doesn't work.
+Either these silos work in a strange way with the sheds or there simply isn't enough space. This mini silo is designed precisely for these purposes.
+It cannot be extended and therefore has no interaction with other buildings in the vicinity. 
+It can be filled with a normal tipper and removed via the output pipe using a wheelbarrow, bucket or low, small trailer.
+
+Anything that fits into a bucket can be stored. It is not multi-fruit and therefore only one fill type goes in.
+Thanks to a script extension, the contents are nevertheless output without an additional pop-up menu when the vehicle's load button is used.
+
+Technical data
+- Required area: 5x5m
+- Price: 6000$
+- Capacity: 8m²
+- Maintenance costs: 20$
 ]]></en>
     </description>
     
@@ -25,24 +59,10 @@
     </extraSourceFiles>
     
     
-    <!-- <l10n> -->
-        <!-- <text name="function_palletStorage"> -->
-            <!-- <en>Storage for pallets and bales</en> -->
-            <!-- <de>Lager für Paletten und Ballen. Die Angegebene Kapazität ist pro Filltype.</de> -->
-            <!-- <it>Magazzino per pallet e balle</it> -->
-            <!-- <ru>Хранилище поддонов и тюков. Вместимость указана для каждого типа материалов.</ru> -->
-        <!-- </text> -->
-        <!-- <text name="smallPalletStorage"> -->
-            <!-- <en>Underground Storage</en> -->
-            <!-- <de>Unterirdisches Lager</de> -->
-            <!-- <it>Stoccaggio sotterraneo</it> -->
-            <!-- <ru>Подземное хранилище</ru> -->
-        <!-- </text> -->
-		<!-- <text name="fillType_FRENCHFRIES" > -->
-			<!-- <en>French Fries</en>  -->
-			<!-- <de>Pommes</de>  -->
-			<!-- <it>Pommes</it> -->
-            <!-- <ru>Картофель фри</ru> -->
-		<!-- </text> -->
-    <!-- </l10n> -->
+    <l10n>
+        <text name="name_miniSilo">
+            <de>Mini Silo</de>
+            <en>Mini Storage</en>
+        </text>
+    </l10n>
 </modDesc>
